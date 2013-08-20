@@ -94,6 +94,7 @@ if (jQuery != undefined) {
                     $addressRow.text('');
                     if (results[0]) {
                         $addressRow.text(results[0].formatted_address);
+                        $container.trigger('geopositionFieldUpdated.geoposition', results[0]);
                     }
                 });
             });
