@@ -1,3 +1,5 @@
+from __future__ import unicode_literals
+
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 
@@ -16,7 +18,6 @@ class GeopositionField(forms.MultiValueField):
             forms.DecimalField(label=_('latitude')),
             forms.DecimalField(label=_('longitude')),
         )
-        kwargs['required'] = False
         if 'initial' in kwargs:
             kwargs['initial'] = Geoposition(*kwargs['initial'].split(','))
         super(GeopositionField, self).__init__(fields, **kwargs)

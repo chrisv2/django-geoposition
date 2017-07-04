@@ -9,7 +9,7 @@ setup(
     url='http://github.com/philippbosch/django-geoposition',
     packages=find_packages(),
     zip_safe=False,
-    package_data = {
+    package_data={
         'geoposition': [
             'locale/*/LC_MESSAGES/*',
             'templates/geoposition/widgets/*.html',
@@ -17,12 +17,12 @@ setup(
         ],
     },
     classifiers=[
-      'Development Status :: 4 - Beta',
-      'Environment :: Web Environment',
-      'Intended Audience :: Developers',
-      'License :: OSI Approved :: BSD License',
-      'Operating System :: OS Independent',
-      'Programming Language :: Python',
-      'Framework :: Django',
+        'Development Status :: 4 - Beta',
+        'Environment :: Web Environment',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: BSD License',
+        'Operating System :: OS Independent',
+        'Programming Language :: Python',
+        'Framework :: Django',
     ]
 )
