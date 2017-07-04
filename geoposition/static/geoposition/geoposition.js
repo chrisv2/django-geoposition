@@ -148,19 +148,6 @@ if (jQuery != undefined) {
             google.maps.event.addListener(marker, 'dragend', function() {
                 $latitudeField.val(this.position.lat());
                 $longitudeField.val(this.position.lng());
-<<<<<<< HEAD
-
-                var gc = new google.maps.Geocoder();
-                gc.geocode({
-                    'latLng': marker.position
-                }, function(results, status) {
-                    $addressRow.text('');
-                    if (results[0]) {
-                        $addressRow.text(results[0].formatted_address);
-                        $container.trigger('geopositionFieldUpdated.geoposition', results[0]);
-                    }
-                });
-=======
                 doGeocode();
             });
             if ($latitudeField.val() && $longitudeField.val()) {
@@ -175,7 +162,6 @@ if (jQuery != undefined) {
                 map.setZoom(15);
                 marker.setPosition(center);
                 doGeocode();
->>>>>>> b3f1b27
             });
         });
     });
